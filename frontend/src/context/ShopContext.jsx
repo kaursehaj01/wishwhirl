@@ -13,7 +13,7 @@ const ShopContextProvider = (props) => {
      // Fetch all products
   const fetchAllProducts = async () => {
     try {
-      const response = await fetch('http://localhost:8090/api/allproducts');
+      const response = await fetch('https://wishwhirl.onrender.com/api/allproducts');
       const data = await response.json();
       setAll_Product(data);
       console.log("data fetch all product shopocntext1", data)
@@ -24,7 +24,7 @@ const ShopContextProvider = (props) => {
    // Fetch categories
    const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:8090/api/allcategory');
+      const response = await fetch('https://wishwhirl.onrender.com/api/allcategory');
       const data = await response.json();
       setCategories(data);
       console.log("data fetch all categories shopocntext2", data)
@@ -40,7 +40,7 @@ const ShopContextProvider = (props) => {
     if (!token) return;
   
     try {
-      const response = await fetch('http://localhost:8090/api/getcart', {
+      const response = await fetch('https://wishwhirl.onrender.com/api/getcart', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ const ShopContextProvider = (props) => {
       if (!token) return;
 
       try {
-          const response = await fetch('http://localhost:8090/api/getwish', {
+          const response = await fetch('https://wishwhirl.onrender.com/api/getwish', {
               method: 'GET',
               headers: {
                   'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ const ShopContextProvider = (props) => {
  const addToWishlist = async (productId) => {
     try {
       const token = localStorage.getItem('auth_token');
-      const response = await fetch('http://localhost:8090/api/addtowish', {
+      const response = await fetch('https://wishwhirl.onrender.com/api/addtowish', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ const ShopContextProvider = (props) => {
   const removeFromWishlist = async (productId) => {
     try {
       const token = localStorage.getItem('auth_token');
-      const response = await fetch('http://localhost:8090/api/removefromwish', {
+      const response = await fetch('https://wishwhirl.onrender.com/api/removefromwish', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -181,7 +181,7 @@ const addToCart = async (productId, quantity = 1) => {
   if (!token) return alert('Please log in first');
 
   try {
-    const response = await fetch('http://localhost:8090/api/addtocart', {
+    const response = await fetch('https://wishwhirl.onrender.com/api/addtocart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -213,7 +213,7 @@ const addToCart = async (productId, quantity = 1) => {
 const removeFromCart = async (productId) => {
   try {
     const token = localStorage.getItem('auth_token');
-    const response = await fetch('http://localhost:8090/api/removefromcart', {
+    const response = await fetch('https://wishwhirl.onrender.com/api/removefromcart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

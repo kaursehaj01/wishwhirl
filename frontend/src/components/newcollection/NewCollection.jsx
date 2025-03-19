@@ -5,7 +5,7 @@ const NewCollection = () => {
   const [new_collection, setNew_collection] =useState([]);
 
   useEffect(()=>{
-    fetch('http://localhost:8090/api/newcollections')
+    fetch('https://wishwhirl.onrender.come/api/newcollections')
     .then((response)=> response.json())
     .then((data)=> setNew_collection(data))
     .catch((error) => console.error('Failed to fetch popular products:', error));
