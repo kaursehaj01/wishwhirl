@@ -229,17 +229,20 @@ const Navbar = () => {
 
                 {/* Mobile Links */}
                 <ul className="text-gray-700 flex flex-col gap-4">
-                <li onClick={() => { setMenu("kidsclothes"); }} className="relative">
-                    <Link to="/kidsclothes" className="text-lg  font-bold">WishWhirl</Link>
+                <li onClick={() => { setMenu("shop"); }} className="relative">
+                    <Link to="/" className="text-lg  font-bold">WishWhirl</Link>
                   </li>
                   <li onClick={() => { setMenu("shop"); }} className="relative">
                     <Link to="/" className="text-base font-medium">Shop</Link>
                   </li>
-                  <li onClick={() => { setMenu("mens"); }} className="relative">
-                    <Link to="/mens" className="text-base font-medium">Men's Cloth</Link>
+                  <li onClick={() => { setMenu("about"); }} className="relative">
+                  <Link to="/about" className="text-base font-medium">About</Link>
+                </li>
+                  <li onClick={() => { setMenu("mensclothes"); }} className="relative">
+                    <Link to="/mensclothes" className="text-base font-medium">Men's Cloth</Link>
                   </li>
-                  <li onClick={() => { setMenu("womens"); }} className="relative">
-                    <Link to="/womens" className="text-base font-medium">Women's Cloth</Link>
+                  <li onClick={() => { setMenu("Womensclothes"); }} className="relative">
+                    <Link to="/Womensclothes" className="text-base font-medium">Women's Cloth</Link>
                   </li>
                   <li onClick={() => { setMenu("kidsclothes"); }} className="relative">
                     <Link to="/kidsclothes" className="text-base font-medium">Kid's Cloths</Link>
@@ -253,8 +256,8 @@ const Navbar = () => {
                   <li onClick={() => { setMenu("kids"); }} className="relative">
                     <Link to="/kids" className="text-base font-medium">Beauty & Wellness</Link>
                   </li>
-                  <li onClick={() => { setMenu("kids"); }} className="relative">
-                    <Link to="/kids" className="text-base font-medium">Sports & Outdoors</Link>
+                  <li onClick={() => { setMenu("contact"); }} className="relative">
+                    <Link to="/contact" className="text-base font-medium">Contact us</Link>
                   </li>
                   
                 </ul>
